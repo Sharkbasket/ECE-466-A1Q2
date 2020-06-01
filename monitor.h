@@ -14,6 +14,5 @@ SC_MODULE(monitor)
     SC_CTOR(monitor)
     {
         SC_CTHREAD(report_values, clock.pos());
-        dont_initialize();
     }
 };

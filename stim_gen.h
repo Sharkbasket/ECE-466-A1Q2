@@ -15,6 +15,5 @@ SC_MODULE(stim_gen)
     SC_CTOR(stim_gen)
     {
         SC_CTHREAD(clock_thread, clock.pos());
-        dont_initialize();
     }
 };
