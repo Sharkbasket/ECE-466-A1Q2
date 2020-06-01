@@ -8,7 +8,7 @@ SC_MODULE(multiplier)
     sc_out<float> out;
     
     // Multiplier constant
-    const float coeff;
+    float coeff;
     
     // Processes
     void multiply();
