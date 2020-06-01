@@ -18,7 +18,7 @@ SC_MODULE(multiplier)
     
     SC_HAS_PROCESS(multiplier);
     
-    multiplier(sc_module_name n, c = 1) : sc_module(n), coeff(c)
+    multiplier(sc_module_name n, float c = 1.0) : sc_module(n), coeff(c)
     {
         SC_METHOD(multiply);
         sensitive << in;

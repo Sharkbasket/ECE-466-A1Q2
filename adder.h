@@ -16,6 +16,6 @@ SC_MODULE(adder)
     SC_CTOR(adder)
     {
         SC_METHOD(add);
-        sensitive << a << b;
+        sensitive << in_1 << in_2;
     }
 };
