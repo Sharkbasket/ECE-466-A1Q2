@@ -3,7 +3,8 @@
 
 
 // Construtor will build the filter from its submodules
-filter::filter(sc_module_name n) : sc_module(n)
+SC_HAS_PROCESS(filter);
+filter::filter(sc_module_name n) : sc_module(n) 
 {
     clk_register reg_1("reg_1");
     reg_1.in(A);

@@ -16,5 +16,5 @@ SC_MODULE(filter)
     sc_signal<float> A, B, C, D, E, F, G, H, I, J, K, L;
     
     // Declare constructor (implemented in filter.cpp)
-    SC_HAS_PROCESS(filter);
+    filter(sc_module_name n);
 };
