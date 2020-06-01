@@ -1,6 +1,7 @@
 #include "systemc.h"
 
 
+// Clocked register with reset. Transfers input to output on clock edges.
 SC_MODULE(clk_register)
 {
     // Ports

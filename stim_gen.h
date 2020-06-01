@@ -1,6 +1,7 @@
 #include "systemc.h"
 
 
+// Stimulus generator. Provides reset and input pulse signals to filter.
 SC_MODULE(stim_gen)
 {
     // Ports

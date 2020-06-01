@@ -3,7 +3,6 @@
 
 
 SC_HAS_PROCESS(filter);
-
 filter::filter(sc_module_name n)
 : sc_module(n),
   reg_1("reg_1"), reg_2("reg_2"), reg_3("reg_3"),

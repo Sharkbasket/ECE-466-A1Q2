@@ -1,6 +1,7 @@
 #include "systemc.h"
 
 
+// Simple adder with two inputs and one output.
 SC_MODULE(adder)
 {
     // Ports

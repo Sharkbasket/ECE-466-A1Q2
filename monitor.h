@@ -1,6 +1,7 @@
 #include "systemc.h"
 
 
+// Monitor module for reporting signal values to console.
 SC_MODULE(monitor)
 {
     // Ports

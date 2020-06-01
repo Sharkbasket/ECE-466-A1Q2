@@ -4,13 +4,14 @@
 #include "monitor.h"
 
 
-int sc_main(int argc, char* argv[]) {
+int sc_main(int argc, char* argv[])
+{
     // Channels
     sc_signal<float> X, Y;
     sc_signal<bool> reset;
     sc_clock clock("clock", 10.0, SC_NS);
     
-    // Instantiate modules
+    // Instantiate & initialize modules
     filter filter_i("filter_i");
     filter_i.X(X);
     filter_i.Y(Y);
@@ -35,6 +36,7 @@ int sc_main(int argc, char* argv[]) {
     sc_trace(tf, reset, "reset");
     sc_trace(tf, clock, "clock");
     
+    // Run simulation for 130 ns
     sc_start(130, SC_NS);
     sc_close_vcd_trace_file(tf);
     

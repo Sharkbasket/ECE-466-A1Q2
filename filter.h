@@ -4,6 +4,7 @@
 #include "clk_register.h"
 
 
+// Digital filter described by filter_diagram.png
 SC_MODULE(filter)
 {
     // Ports
