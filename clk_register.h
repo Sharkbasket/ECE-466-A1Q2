@@ -10,20 +10,7 @@ SC_MODULE(clk_register)
     sc_out<float> out;
     
     // Processes
-    void clock_thread()
-    {
-        if (reset)
-        {
-            out->write(0.0);
-            wait();
-        }
-        
-        while (true)
-        {
-            out->write(in.read());
-            wait();
-        }
-    }
+    void clock_thread();
     
     SC_CTOR(clk_register)
     {

@@ -9,24 +9,7 @@ SC_MODULE(stim_gen)
     sc_out<bool> reset;
     
     // Processes
-    void clock_thread()
-    {
-        // Clear X and assert reset
-        X->write(0.0);
-        reset->write(true);
-        wait();
-    
-        // De-assert reset and send a unit pulse to X
-        reset->write(false);
-        X->write(1.0);
-        wait();
-        X->write(0.0);
-    
-        while (true)
-        {
-            wait();
-        }
-    }
+    void clock_thread();
     
     // Constructor
     SC_CTOR(stim_gen)

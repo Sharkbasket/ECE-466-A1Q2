@@ -11,10 +11,7 @@ SC_MODULE(multiplier)
     const float coeff;
     
     // Processes
-    void multiply()
-    {
-        out->write(coeff * in->read());
-    }
+    void multiply();
     
     SC_HAS_PROCESS(multiplier);
     

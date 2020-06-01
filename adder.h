@@ -8,10 +8,7 @@ SC_MODULE(adder)
     sc_out<float> out;
     
     // Processes
-    void add()
-    {
-        out->write(in_1->read() + in_2->read());
-    }
+    void add();
     
     SC_CTOR(adder)
     {
