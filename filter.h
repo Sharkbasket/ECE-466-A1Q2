@@ -13,7 +13,7 @@ SC_MODULE(filter)
     sc_out<float> Y;
     
     // Internal signals
-    sc_signal<float> A, B, C, D, E, F, G, H, I, J, K, L;
+    sc_signal<float> A, B, C, D, E, F, G, H, I, J, K, L, M;
     
     // Declare constructor (implemented in filter.cpp)
     filter(sc_module_name n);
