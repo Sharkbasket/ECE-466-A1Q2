@@ -13,9 +13,9 @@ SC_MODULE(monitor)
     {
         while (true)
         {
-            std::cout << "timestamp: " << sc_time_stamp() << endl;
-            std::cout << "x = " << x->read() << endl;
-            std::cout << "y = " << y->read() << endl << endl;
+            std::cout << "Timestamp: " << sc_time_stamp() << endl;
+            std::cout << "X = " << X->read() << endl;
+            std::cout << "Y = " << Y->read() << endl << endl;
             wait();
         }
     }

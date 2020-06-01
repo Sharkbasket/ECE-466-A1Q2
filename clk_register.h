@@ -28,7 +28,7 @@ SC_MODULE(clk_register)
     SC_CTOR(clk_register)
     {
         SC_CTHREAD(clock_thread, clock.pos());
-        reset_signal_is(reset);
+        reset_signal_is(reset, true);
         dont_initialize();
     }
 };
