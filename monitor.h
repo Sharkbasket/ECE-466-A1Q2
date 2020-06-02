@@ -1,4 +1,6 @@
 #include "systemc.h"
+#include <iostream>
+#include <iomanip>
 
 
 // Monitor module for reporting signal values to console.

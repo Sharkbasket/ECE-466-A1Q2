@@ -1,15 +1,14 @@
 #include "systemc.h"
 #include "monitor.h"
-#include <iostream>
 
 
 void monitor::report_values()
 {
     while (true)
     {
-        std::cout << "Timestamp: " << sc_time_stamp() << endl;
-        std::cout << "X = " << X->read() << endl;
-        std::cout << "Y = " << Y->read() << endl << endl;
+        std::cout << std::setw(15) << sc_time_stamp()
+                  << std::setw(15) << X->read()
+                  << std::setw(15) << Y->read() << endl;
         wait();
     }
 }

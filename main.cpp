@@ -36,6 +36,10 @@ int sc_main(int argc, char* argv[])
     sc_trace(tf, reset, "reset");
     sc_trace(tf, clock, "clock");
     
+    // Print column headers
+    std::cout << endl << std::setw(15) << "timestamp"
+              << std::setw(15) << "X" << std::setw(15) << "Y" << endl << endl;
+    
     // Run simulation for 130 ns
     sc_start(130, SC_NS);
     sc_close_vcd_trace_file(tf);
