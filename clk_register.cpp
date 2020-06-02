@@ -12,7 +12,7 @@ void clk_register::clock_thread()
     
     while (true)
     {
-        out->write(in.read());
+        out->write(in->read());
         wait();
     }
 }
