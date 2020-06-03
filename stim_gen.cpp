@@ -2,6 +2,15 @@
 #include "stim_gen.h"
 
 
+// Constructor
+SC_HAS_PROCESS(stim_gen);
+stim_gen::stim_gen(sc_module_name n) : sc_module(n)
+{
+    SC_CTHREAD(clock_thread, clock.pos());
+}
+
+
+// Generate testbench stimulus.
 void stim_gen::clock_thread()
 {
     // Clear X and assert reset

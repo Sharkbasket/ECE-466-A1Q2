@@ -8,12 +8,9 @@ SC_MODULE(adder)
     sc_in<float> in_1, in_2;
     sc_out<float> out;
     
+    // Constructor
+    adder(sc_module_name n);
+    
     // Processes
     void add();
-    
-    SC_CTOR(adder)
-    {
-        SC_METHOD(add);
-        sensitive << in_1 << in_2;
-    }
 };

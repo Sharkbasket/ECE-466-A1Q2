@@ -2,6 +2,15 @@
 #include "monitor.h"
 
 
+// Constructor
+SC_HAS_PROCESS(monitor);
+monitor::monitor(sc_module_name n) : sc_module(n)
+{
+    SC_CTHREAD(report_values, clock.pos());
+}
+
+
+// Print current values of X and Y to console on clock edges.
 void monitor::report_values()
 {
     while (true)

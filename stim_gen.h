@@ -9,12 +9,9 @@ SC_MODULE(stim_gen)
     sc_out<float> X;
     sc_out<bool> reset;
     
+    // Constructor
+    stim_gen(sc_module_name n);
+    
     // Processes
     void clock_thread();
-    
-    // Constructor
-    SC_CTOR(stim_gen)
-    {
-        SC_CTHREAD(clock_thread, clock.pos());
-    }
 };

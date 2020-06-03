@@ -2,8 +2,10 @@
 #include "filter.h"
 
 
+// Constructor
 SC_HAS_PROCESS(filter);
 filter::filter(sc_module_name n)
+// Instantiate submodules in initialization list.
 : sc_module(n),
   reg_1("reg_1"), reg_2("reg_2"), reg_3("reg_3"),
   mult_1("mult_1", 0.4), mult_2("mult_2", 0.24), mult_3("mult_3", -0.8),

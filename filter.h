@@ -20,7 +20,7 @@ SC_MODULE(filter)
     clk_register reg_1, reg_2, reg_3;
     multiplier mult_1, mult_2, mult_3, mult_4, mult_5, mult_6;
     adder add_1, add_2, add_3, add_4, add_5;
-    
-    // Declare constructor (implemented in filter.cpp)
+     
+    // Constructor
     filter(sc_module_name n);
 };

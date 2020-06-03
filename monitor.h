@@ -10,12 +10,9 @@ SC_MODULE(monitor)
     sc_in<float> X, Y;
     sc_in_clk clock;
     
+    // Constructor
+    monitor(sc_module_name n);
+    
     // Processes
     void report_values();
-    
-    // Constructor
-    SC_CTOR(monitor)
-    {
-        SC_CTHREAD(report_values, clock.pos());
-    }
 };

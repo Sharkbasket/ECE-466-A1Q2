@@ -10,12 +10,9 @@ SC_MODULE(clk_register)
     sc_in_clk clock;
     sc_out<float> out;
     
+    // Constructor
+    clk_register(sc_module_name n);
+    
     // Processes
     void clock_thread();
-    
-    SC_CTOR(clk_register)
-    {
-        SC_CTHREAD(clock_thread, clock.pos());
-        reset_signal_is(reset, true);
-    }
 };
