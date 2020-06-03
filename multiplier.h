@@ -9,7 +9,7 @@ SC_MODULE(multiplier)
     sc_out<float> out;
     
     // Multiplier constant
-    float coeff;
+    const float coeff;
     
     // Processes
     void multiply();
@@ -17,7 +17,7 @@ SC_MODULE(multiplier)
     /* Need to call SC_HAS_PROCESS and use normal constructor so we can pass a
        value to coeff during instantiation */
     SC_HAS_PROCESS(multiplier);
-    multiplier(sc_module_name n, float c = 1.0) : sc_module(n), coeff(c)
+    multiplier(sc_module_name n, const float c = 1.0) : sc_module(n), coeff(c)
     {
         SC_METHOD(multiply);
         sensitive << in;
